@@ -16,7 +16,7 @@ class Window():
 
     def redraw(self):
         self.__root.update_idletasks()
-        self.__root.update
+        self.__root.update()
 
     def wait_for_close(self):
         self.__running = True
@@ -29,6 +29,7 @@ class Window():
 
     def close(self):
         self.__running = False
+        self.__root.destroy()
 
 class Point:
     def __init__(self, x, y):
